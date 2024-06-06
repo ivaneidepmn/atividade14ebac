@@ -1,15 +1,11 @@
-import contrato from '../contracts/produtos.contract';
+const Joi = require('joi');
 
-Cypress.Commands.add('cadastrarProduto', (token, nome, preco, descricao, quantidade) => {
-    return cy.request({
-        method: 'POST',
-        url: 'produtos',
-        body: {
-            "nome": nome,
-            "preco": preco,
-            "descricao": descricao,
-            "quantidade": quantidade
-        },
-        headers: { authorization: token }
-    });
+// Definição do esquema de validação para produtos
+const produtoSchema = Joi.object({
+    nome: Joi.string().required(),
+    preco: Joi.number().min(0).required(),
+    descricao: Joi.string().required(),
+    quantidade: Joi.number().min(0).required()
 });
+
+module.exports = produtoSchema;
