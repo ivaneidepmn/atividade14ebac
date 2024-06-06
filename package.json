@@ -1,0 +1,22 @@
+{
+  "name": "atividade14ebac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivaneidepmn/atividade14ebac.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivaneidepmn/atividade14ebac/issues"
+  },
+  "homepage": "https://github.com/ivaneidepmn/atividade14ebac#readme",
+  "dependencies": {
+    "cypress": "^13.6.0"
+  }
+}
